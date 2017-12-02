@@ -6,19 +6,11 @@
 int main(void)
 {
  int err=0,countOfElements=0;
- int *array;
- int answer;
- err=InputArray("data.txt", &array, &countOfElements);
+ int result;
+ int number=2,pow=5;
+ err=fastPowExec(number, pow, &result);
+ printf("%i\n",result);
  if(err!=0)
   printf("Error!!!\n");
- else
-  {
-	if (countOfElements==0){
-		printf("File is empty!!!");
-	} else {
-		answer=searchArray(array,countOfElements);
-		printf("Number of elements in new array: %i",answer);
-	}
-  }
 return err;
 }
